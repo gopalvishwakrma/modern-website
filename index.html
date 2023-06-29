@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modern website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-text-color: #172740;
+            --secondary-text-color: #577592;
+            --accent-color: #b0150f;
+            --accent-color-dark: hsl(353, 47%, 54%);
+            --padding-inline-section: 20px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-text-color);
+            background-color: #ebebf0;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.25rem;
+            color: var(secondary-text-color);
+        }
+
+        a {
+            text-decoration: none;
+            display: inline;
+        }
+
+        .small-bold-text {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .container {
+            overflow: hidden;
+            max-width: 1180px;
+            margin-inline: auto;
+            padding-inline: var(--padding-inline-section);
+        }
+
+        .top-banner {
+            /* background-image: url(https://cdn4.vectorstock.com/i/1000x1000/78/53/baby-blue-background-vector-67853.jpg); */
+            background-image: url(https://cdn.vectorstock.com/i/preview-1x/73/31/red-background-texture-vector-11257331.webp);
+            background-size: 200px;
+        }
+
+        .banner-text {
+            color: white;
+            /* color: #172740; */
+            padding: 15px 30px;
+            text-align: center;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .hover-links {
+            color: var(--primary-text-color);
+        }
+
+        .hover-links:hover {
+            color: var(--accent-color);
+            transition: 0.2s ease-out;
+            /* text-shadow: 0 0 1px var(--accent-color); */
+        }
+
+        .ul {
+            list-style-type: none;
+        }
+
+        .main-nav {
+            position: relative;
+            justify-content: space-between;
+            height: 3rem;
+            margin-top: 10px;
+        }
+
+        .nav-linkds {
+            flex-basis: 730px;
+        }
+
+        .nav-linkds ul {
+            justify-content: end;
+            gap: 40px;
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+
+        .company-logo img {
+            mix-blend-mode: multiply;
+            position: relative;
+            top: 6px;
+            width: 119px;
+        }
+
+        .primary-button {
+            color: white !important;
+            background-color: var(--accent-color);
+            border-radius: 6px;
+            font-weight: 700;
+            padding: 12px 20px;
+            box-shadow: 0 0 2px var(--secondary-text-color);
+            transition: 0.2s ease-out;
+        }
+
+        .primary-button:hover {
+            background-color: var(--accent-color-dark);
+        }
+
+        .secondary-button {
+            border: 0.5px solid var(--secondary-text-color);
+            border-radius: 6px;
+            font-weight: 700;
+            color: var(--primary-text-color) !important;
+            padding: 12px 20px;
+            transition: 0.2s ease-out;
+        }
+
+        .secondary-button:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color) !important;
+        }
+        
+        header {
+            padding: 50px var(--padding-inline-section) 0;
+        }
+
+        .header-section {
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .header-left {
+            max-width: 40vw;
+        }
+
+        .header-left h1 {
+            margin-top: 20px;
+        }
+
+        .header-right img {
+            width: 100%;
+        }
+
+        .companies-header {
+            margin-top: 200px;
+            text-align: center;
+            margin-block: 30px;
+            color: var(--primary-text-color);
+
+        }
+
+        .logos {
+            justify-content: space-evenly;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            height: 130px;
+        }
+
+        .logos img {
+            mix-blend-mode: multiply;
+            width: 130px;
+        }
+
+        .feature-section {
+            text-align: center;
+            padding: 80px var(--padding-inline-section) 0;
+            background-image: url();
+        }
+
+        .feature-area {
+            gap: 20px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .features-card {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            flex-direction: column;
+            gap: 20px;
+            width: 30%;
+        }
+
+        .first-big-right img,
+        .second-big-left img,
+        .third-big-right img {
+            border-radius: 8px;
+        }
+
+        .first-big-feature {
+            margin: 80px var(--padding-inline-section) 0;
+        }
+
+        .second-big-feature img {
+            width: 420px;
+        }
+
+        .second-big-feature {
+            margin-top: 20px;
+            gap: 45px;
+        }
+
+        .example-header {
+            margin-top: 29px;
+            flex-direction: column;
+        }
+
+        .example-header-only {
+            margin-top: 39px;
+        }
+
+        .example-card {
+            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            justify-content: center;
+            justify-content: space-between;
+            min-height: 300px;
+            position: relative;
+            background: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 0.2s ease-out;
+        }
+
+        .example-card:hover {
+            box-shadow: 0 0 10px #888;
+        }
+
+        .example-area {
+            flex-wrap: wrap;
+            position: relative;
+            margin-left: 18px;
+            margin-top: 35px;
+            text-align: center;
+            display: inline-block;
+            min-width: 23%;
+        }
+
+        .example-card-text {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            color: white;
+        }
+
+        .cta-header1,
+        .cta-header2,
+        .cta-btn {
+            position: relative;
+            top: 142px;
+        }
+
+        .cta-text {
+            margin-top: 15px;
+            height: 430px;
+            width: 100%;
+            background-color: #172740;
+            color: white;
+            text-align: center;
+        }
+
+        .company-logo {
+            position: relative;
+            top: 3px;
+        }
+
+        .link-column {
+            position: relative;
+            top: 65px;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-footer {
+            padding-block: 80px;
+            background-color: #ebf2fa;
+        }
+
+        .footer-section {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .subfooter {
+            background-color: #b9ced4;
+            padding: var(--padding-inline-section);
+        }
+
+        .subfooter-container {
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 991px) {
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .nav-toggle {
+                display: block;
+                margin-right: 20px;
+            }
+
+            .main-nav {
+                overflow: inherit;
+            }
+
+            .nav-linkds {
+                position: absolute;
+                background-color: white;
+                height: 400px;
+                left: -100%;
+                top: 100%;
+                width: 100%;
+                justify-content: center;
+                transition: 0.2s ease-in-out;
+            }
+
+            .nav-linkds.active {
+                left: 0;
+            }
+
+            .nav-linkds ul {
+                flex-direction: column;
+            }
+
+            .logos {
+                gap: 15px;
+            }
+
+            .example-area {
+                margin: 10px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .example-card {
+                width: 100%;
+            }
+
+            .cta-text {
+                margin-top: 3px;
+                height: 390px;
+            }
+
+            .cta-header1,
+            .cta-header2,
+            .cta-btn {
+                position: relative;
+                top: 95px;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+
+            :root {
+                --padding-inline-section: 15px;
+            }
+
+            h4 {
+                font-size: .1rem;
+            }
+
+            .primary-button {
+                width: 100%;
+            }
+
+            .header-section {
+                flex-direction: column-reverse;
+                /* gap: 5px; */
+            }
+
+            .header-left h1 {
+                margin-top: 1px;
+            }
+
+            .header-left {
+                max-width: 100vw;
+                text-align: center;
+            }
+
+            .header-right {
+                margin-bottom: 5px;
+            }
+
+            .companies-section {
+                margin-top: 10px;
+            }
+
+            .features-card {
+                min-width: 100%;
+            }
+
+            .example-card-text {
+                font-size: 1.3rem;
+            }
+
+            .first-big-feature,
+            .third-big-feature {
+                flex-direction: column-reverse;
+            }
+
+            .example-card {
+                width: 100%;
+            }
+
+            .second-big-feature {
+                margin-top: 50px;
+            }
+
+            .third-big-feature {
+                margin-top: 50px;
+            }
+
+            .second-big-feature {
+                flex-direction: column;
+            }
+
+            .footer-section {
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+                align-items: center;
+            }
+
+            .link-column {
+                align-items: stretch;
+            }
+        }
+
+        @media screen and (max-width: 479px) {
+
+            :root {
+                --padding-inline-section: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .company-logo img {
+                width: 150px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-banner">
+        <div class="container">
+            <div class="small-bold-text banner-text">🎉New to Usability Hub: Open and Closed cards sorting</div>
+        </div>
+    </div>
+    <nav>
+        <div class="container main-nav flex">
+            <a href="#" class="company-logo">
+                <img src="DALL·E 2023-06-29 10.25.36 - Create a visually stunning logo featuring a network of vibrant, overlapping lines and shapes, symbolizing the power of connecting with the right peopl.png" alt="company-logo">
+            </a>
+            <div class="nav-linkds flex" id="nav-linkds">
+                <ul class="flex ul">
+                    <li><a href="#" class="hover-links">Products</a></li>
+                    <li><a href="#" class="hover-links">Customer</a></li>
+                    <li><a href="#" class="hover-links">Pricing</a></li>
+                    <li><a href="#" class="hover-links">Resources</a></li>
+                    <li><a href="#" class="hover-links secondary-button">Sign in</a></li>
+                    <li><a href="#" class="hover-links primary-button">Sign up</a></li>
+                </ul>
+            </div>
+            <a href="#" class=" nav-toggle hover-links" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container header-section flex">
+            <div class="header-left">
+                <h1>Network Effectively</h1>
+                <p>NetHub is a online networking platform that helps you connect with the right people and grow your business with real feedback.</p><br>
+                <a href="#" class="primary-button get-started-btn">Get Started</a>
+            </div>
+            <div class="header-right">
+                <img src="three peoples using mobile.jpg" alt="">
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <section class="companies-section">
+        <div class="container">
+            <div class="small-bold-text companies-header">The world's best companies rely on UsabilityHub to make better
+                design decisions.</div>
+            <div class="logos">
+                <img class="logo" src="amazon-logo.png" alt="amazon-logo">
+                <img class="logo"
+                    src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/information-technology-companies/cognizant-logo.png"
+                    alt="">
+                <img class="logo" src="https://www.freeiconspng.com/thumbs/dell-logo-icon-png/dell-icon-11.jpg" alt="">
+                <img class="logo"
+                    src="https://www.pngitem.com/pimgs/m/284-2840833_india-today-group-logo-hd-png-download.png" alt="">
+                <img class="logo" src="https://www.conectasoftware.com/wp-content/uploads/2020/12/airtable-750x625.png"
+                    alt="">
+                <img class="logo" src="https://cdn.freebiesupply.com/logos/thumbs/2x/taskrabbit-logo.png"
+                    alt="taskrabbit-logo">
+            </div>
+        </div>
+    </section>
+    <br>
+
+    <section class="feature-section">
+        <div class="container">
+            <div class="small-bold-text feature-header">
+                <h3>NetHub's Networking Swiss Army Knife offers</h3><br>
+                <br>
+                <a href="#" class="secondary-button">See all features <i class="fa-solid fa-arrow-right"></i> </i> </a>
+            </div>
+            <br>
+            <div class="feature-area flex">
+                <div class="features-card">
+                    <h3>Card Sorting</h3>
+                    <p> Uncover how users naturally group and label information on your platform. Understand their mental models, improving the organization and accessibility of your networking features.</p><br>
+                    <a href="#" class="secondary-button learn-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </i> </a>
+                </div>
+                <div class="features-card">
+                    <h3>Prototype tests</h3>
+                    <p>Dive deep into user navigation on your platform's prototype. Gain valuable feedback on the user flow, identifying pain points and refining the platform's usability.</p><br>
+                    <a href="#" class="secondary-button learn-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </i> </a>
+                </div>
+                <div class="features-card">
+                    <h3>First click tests</h3>
+                    <p> Test users' initial interactions and navigation paths. Identify any usability issues early on, ensuring an intuitive and seamless networking experience.</p><br>
+                    <a href="#" class="secondary-button learn-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </i> </a>
+                </div>
+                <div class="features-card">
+                    <h3>Design surveys</h3>
+                    <p>Gather feedback on visual elements like images, videos, and audio files. Understand users' perceptions and preferences, refining your platform's aesthetics.</p><br>
+                    <a href="#" class="secondary-button learn-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </i> </a>
+                </div>
+                <div class="features-card">
+                    <h3>Preference tests</h3>
+                    <p> Determine users' design preferences and understand the reasons behind their choices. Tailor your networking platform to create a visually appealing and engaging experience.</p><br>
+                    <a href="#" class="secondary-button learn-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </i> </a>
+                </div>
+                <div class="features-card">
+                    <h3>Five second tests</h3>
+                    <p>Measure users' first impressions of your platform's comprehensibility. Ensure that your messaging, visuals, and presentation effectively communicate the networking features.</p><br>
+                    <a href="#" class="secondary-button learn-more">Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </i> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-features">
+
+        <div class="container flex">
+            <div class="first-big-feature flex photo-feature">
+                <div class="first-big-left">
+                    <h4>Effortless validation for</h4>
+                    <h2>Networking Excellence</h2>
+                    <p>Effortless validation for networking professionals. Test interfaces, interaction flows, connections, and more to create intuitive and delightful networking experiences. Test interfaces, interaction flows, iconography and more, to help you create intuitive and
+                        delightful experiences for you users.</p>
+                </div>
+                <div class="first-big-right">
+                    <img src="https://images.pexels.com/photos/7504612/pexels-photo-7504612.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex">
+            <div class="second-big-feature flex photo-feature">
+                <div class="second-big-left">
+                    <img src="https://images.pexels.com/photos/4977409/pexels-photo-4977409.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+                <div class="second-big-right">
+                    <h4>Effortless validation for</h4>
+                    <h2>Networking Excellence</h2>
+                    <p>Effortless validation for networking professionals. Test interfaces, interaction flows, connections, and more to create intuitive and delightful networking experiences. Test interfaces, interaction flows, iconography and more, to help you create intuitive and
+                        delightful experiences for you users.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container flex">
+            <div class="third-big-feature flex photo-feature">
+                <div class="third-big-left">
+                    <h4>Effortless validation for</h4>
+                    <h2>Networking Excellence</h2>
+                    <p>Effortless validation for networking professionals. Test interfaces, interaction flows, connections, and more to create intuitive and delightful networking experiences. Test interfaces, interaction flows, iconography and more, to help you create intuitive and
+                        delightful experiences for you users.</p>
+                </div>
+                <div class="third-big-right">
+                    <img src="https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="examples-section">
+        <div class="container">
+            <div class="small-bold-text example-header-only flex example-header">
+                <h3>One platform, endless possibilities</h3><br>
+                <a href="#" class="secondary-button">See more examples <i class="fa-solid fa-arrow-right"></i> </i> </a>
+            </div>
+            <div class="example-area flex">
+                <a class="example-card" href="#"
+                    style="background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(https://images.pexels.com/photos/196655/pexels-photo-196655.jpeg?auto=compress&cs=tinysrgb&w=600); background-size: cover;">
+                    <h4 class="example-card-text">can users complete a task in my software interface?</h4>
+                </a>
+            </div>
+
+            <div class="example-area flex">
+                <a class="example-card" href="#"
+                    style="background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)),url(https://images.pexels.com/photos/4145194/pexels-photo-4145194.jpeg?auto=compress&cs=tinysrgb&w=600); background-size: cover;">
+                    <h4 class="example-card-text">can users find important pages on my websites?</h4>
+                </a>
+            </div>
+
+            <div class="example-area flex">
+                <a class="example-card" href="#"
+                    style="background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(https://images.pexels.com/photos/1708988/pexels-photo-1708988.jpeg?auto=compress&cs=tinysrgb&w=600); background-size: cover;">
+                    <h4 class="example-card-text">Is my website's intended audience clear</h4>
+                </a>
+            </div>
+
+            <div class="example-area flex">
+                <a class="example-card" href="#"
+                    style="background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(https://images.pexels.com/photos/7203692/pexels-photo-7203692.jpeg?auto=compress&cs=tinysrgb&w=600); background-size: cover;">
+                    <h4 class="example-card-text">Do visitors understand what a page is about</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-text">
+            <h1 class="cta-header1">Start testing today</h1><br>
+            <h5 class="cta-header2">Take the guesswork out of decisions</h5><br>
+            <br>
+            <a href="#" class="primary-button learn-more cta-btn">Get Started<i class="fa-solid fa-arrow-right"></i></i>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer-footer">
+        <div class="container flex footer-section">
+            <a href="#" class="company-logo">
+                <img src="DALL·E 2023-06-29 10.25.36 - Create a visually stunning logo featuring a network of vibrant, overlapping lines and shapes, symbolizing the power of connecting with the right peopl.png" alt="company-logo">
+            </a>
+            <div class="link-column flex">
+                <h3>Product</h4>
+                    <a href="#" class="hover-links">Overview</a>
+                    <a href="#" class="hover-links">Pricing</a>
+                    <a href="#" class="hover-links">UsabilityHub</a>
+                    <a href="#" class="hover-links">Customer page</a>
+                    <a href="#" class="hover-links">Status Page</a>
+            </div>
+            <div class="link-column flex">
+                <h3>Methodology</h4>
+                    <a href="#" class="hover-links">Overview</a>
+                    <a href="#" class="hover-links">Pricing</a>
+                    <a href="#" class="hover-links">UsabilityHub</a>
+                    <a href="#" class="hover-links">Customer page</a>
+                    <a href="#" class="hover-links">Status Page</a>
+            </div>
+            <div class="link-column flex">
+                <h3>Resources</h4>
+                    <a href="#" class="hover-links">Overview</a>
+                    <a href="#" class="hover-links">Pricing</a>
+                    <a href="#" class="hover-links">UsabilityHub</a>
+                    <a href="#" class="hover-links">Customer page</a>
+                    <a href="#" class="hover-links">Status Page</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="subfooter">
+        <div class="container flex subfooter-container">
+            <a class="hover-links" href="#">Privacy policy</a>
+            <a class="hover-links" href="#">Terms & condition</a>
+            <a class="hover-links" href="#">Security information</a>
+            <a class="hover-links" href="#"> <i class="fa-brands fa-facebook"></i> </a>
+            <a class="hover-links" href="#"> <i class="fa-brands fa-instagram"></i> </a>
+            <a class="hover-links" href="#"> <i class="fa-brands fa-youtube"></i> </a>
+            <a class="hover-links" href="#"> <i class="fa-brands fa-twitter"></i> </a>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/cfafb8089e.js" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-linkds');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+
+    </script>
+</body>
+
+</html>
